@@ -4,11 +4,12 @@
 	>
 		<!-- Logo -->
 		<div class="flex items-center">
-			<img
-				src="@/assets/images/shared/desktop/logo.svg"
-				alt="Photosnap Logo"
-				class="h-4"
-			/>
+			<router-link to="/">
+				<img
+					src="@/assets/images/shared/desktop/logo.svg"
+					alt="Photosnap Logo"
+					class="h-4"
+			/></router-link>
 		</div>
 
 		<!-- Navigation Links -->
@@ -32,21 +33,31 @@
 		</button>
 
 		<!-- Mobile Menu -->
-		<div
-			v-if="isMobileMenuOpen"
-			class="absolute top-[72px] left-0 right-0 bg-white p-8 flex flex-col items-center space-y-5 md:hidden z-10"
+		<transition
+			enter-active-class="transition duration-300 ease-out"
+			enter-from-class="transform -translate-y-full opacity-0"
+			enter-to-class="transform translate-y-0 opacity-100"
+			leave-active-class="transition duration-200 ease-in"
+			leave-from-class="transform translate-y-0 opacity-100"
+			leave-to-class="transform -translate-y-full opacity-0"
 		>
-			<router-link
-				v-for="link in navLinks"
-				:key="link.path"
-				:to="link.path"
-				class="text-h4 uppercase tracking-wider font-bold"
+			<div
+				v-if="isMobileMenuOpen"
+				class="absolute top-[72px] left-0 right-0 bg-white p-8 flex flex-col items-center space-y-5 md:hidden z-10 shadow-lg"
 			>
-				{{ link.name }}
-			</router-link>
-			<div class="w-full h-[1px] bg-black opacity-25"></div>
-			<BaseButton text="Get an invite" class="w-full" />
-		</div>
+				<router-link
+					v-for="link in navLinks"
+					:key="link.path"
+					:to="link.path"
+					class="text-h4 uppercase tracking-wider font-bold"
+					@click="isMobileMenuOpen = false"
+				>
+					{{ link.name }}
+				</router-link>
+				<div class="w-full h-[1px] bg-black opacity-25"></div>
+				<BaseButton text="Get an invite" class="w-full" />
+			</div>
+		</transition>
 	</nav>
 </template>
 

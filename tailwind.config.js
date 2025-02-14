@@ -19,6 +19,15 @@ export default {
 				h4: ["12px", { lineHeight: "16px", letterSpacing: "2px" }],
 				body: ["15px", { lineHeight: "25px" }],
 			},
+			animation: {
+				loading: "loading 1.5s ease-in-out infinite",
+			},
+			keyframes: {
+				loading: {
+					"0%": { transform: "translateX(-100%)" },
+					"100%": { transform: "translateX(200%)" },
+				},
+			},
 		},
 		backgroundImage: {
 			"main-accent":

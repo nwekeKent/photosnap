@@ -7,29 +7,41 @@
 	>
 		<div
 			:class="[
-				'flex flex-col justify-center  px-8 py-[72px] md:px-14 md:py-[173px] lg:px-28  lg:max-w-[610px]  md:max-w-[496px]',
+				'py-[72px]  md:py-[173px] flex items-center  lg:max-w-[610px] relative  md:max-w-[496px]',
 				textDivDark ? 'bg-black text-white' : 'bg-white text-black',
 			]"
 		>
-			<slot>
-				<h1
-					v-if="title"
-					class="mb-5 uppercase text-h1-mobile md:text-h1-desktop font-bold text-start"
-				>
-					{{ title }}
-				</h1>
-				<p v-if="description" class="text-body opacity-60">
-					{{ description }}
-				</p>
+			<div
+				v-if="textDivDark"
+				class="h-[6px] w-[128px] bg-main-accent z-10 absolute top-0 left-8 md:hidden"
+			></div>
 
-				<div v-if="hasButton" class="mt-6 md:mt-12">
-					<OutlineButton
-						:isDark="!textDivDark"
-						:text="buttonText"
-						class="hover:underline"
-					/>
-				</div>
-			</slot>
+			<div class="relative flex flex-col px-8 lg:px-28 md:px-14">
+				<div
+					v-if="textDivDark"
+					class="bg-main-accent z-10 absolute top-0 h-full w-[6px] left-0 md:block hidden"
+				></div>
+
+				<slot>
+					<h1
+						v-if="title"
+						class="mb-5 uppercase text-h1-mobile md:text-h1-desktop font-bold text-start"
+					>
+						{{ title }}
+					</h1>
+					<p v-if="description" class="text-body opacity-60">
+						{{ description }}
+					</p>
+
+					<div v-if="hasButton" class="mt-6 md:mt-12">
+						<OutlineButton
+							:isDark="!textDivDark"
+							:text="buttonText"
+							class="hover:underline"
+						/>
+					</div>
+				</slot>
+			</div>
 		</div>
 
 		<div :class="['relative md:col-span-2 w-full']">

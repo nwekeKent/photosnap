@@ -1,5 +1,8 @@
 <template>
-	<div class="relative border-l-[6px] border-main-accent">
+	<div class="relative">
+		<div
+			class="h-[6px] w-[128px] bg-main-accent z-10 absolute top-0 left-8 lg:h-full lg:w-[6px] lg:left-0"
+		></div>
 		<!-- Background Image Container -->
 		<div class="absolute inset-0">
 			<picture>
