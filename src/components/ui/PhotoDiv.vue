@@ -44,7 +44,7 @@
 			</div>
 		</div>
 
-		<div :class="['relative md:col-span-2 w-full']">
+		<div :class="['relative md:col-span-2 w-full max-h-[650px]']">
 			<picture>
 				<source :srcset="images.desktop" media="(min-width: 1024px)" />
 				<source :srcset="images.tablet" media="(min-width: 768px)" />
