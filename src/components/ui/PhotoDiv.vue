@@ -51,7 +51,7 @@
 				<img
 					:src="images.mobile"
 					:alt="imageAlt"
-					class="w-full lg:w-full md:h-full h-full object-cover"
+					class="w-full lg:w-full md:h-full h-[294px] object-cover"
 				/>
 			</picture>
 		</div>
