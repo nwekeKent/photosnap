@@ -7,7 +7,7 @@
 	>
 		<div
 			:class="[
-				'py-[72px]  md:py-[173px] flex items-center  lg:max-w-[610px] relative  md:max-w-[496px]',
+				'py-[72px]  md:py-[173px] flex items-center  md:max-w-[610px] relative',
 				textDivDark ? 'bg-black text-white' : 'bg-white text-black',
 			]"
 		>
