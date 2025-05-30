@@ -25,9 +25,9 @@
 		<div class="flex flex-col lg:flex-row items-center gap-8">
 			<!-- Basic Plan -->
 			<div
-				class="text-center flex flex-col md:flex-row md:justify-between lg:flex-col w-full md:text-left py-14 px-8 bg-light-grey md:even:py-[88px] md:even:bg-black md:even:text-white"
+				class="text-center bg-b items-center flex flex-col md:flex-row md:justify-between lg:flex-col w-full md:text-left py-14 px-8 bg-light-grey md:even:py-[88px] md:even:bg-black md:even:text-white"
 			>
-				<div class="md:max-w-[270px]">
+				<div class="max-w-[270px] text-center md:text-left lg:text-center">
 					<h2 class="text-h2-desktop font-bold mb-4">Basic</h2>
 					<p class="text-body opacity-60 mb-10">
 						Includes basic usage of our platform. Recommended for new and
@@ -41,11 +41,11 @@
 					</button>
 				</div>
 
-				<div class="mb-10">
+				<div class="mb-10 text-center md:text-left lg:text-center">
 					<p class="text-h1-desktop font-bold">
 						{{ isYearly ? "$190.00" : "$19.00" }}
 					</p>
-					<p class="text-body opacity-60">
+					<p class="text-body opacity-60 md:text-right lg:text-center">
 						per {{ isYearly ? "year" : "month" }}
 					</p>
 				</div>
@@ -58,9 +58,9 @@
 
 			<!-- Pro Plan -->
 			<div
-				class="text-center flex flex-col md:flex-row md:justify-between lg:flex-col w-full md:text-left lg:min-h-[470px] py-14 px-8 bg-black text-white relative before:absolute before:top-0 before:left-0 before:right-0 before:h-[6px] before:bg-main-accent"
+				class="text-center items-center flex flex-col md:flex-row md:justify-between lg:flex-col w-full md:text-left lg:min-h-[470px] py-14 px-8 bg-black text-white relative before:absolute before:top-0 before:left-0 before:right-0 before:h-[6px] before:bg-main-accent"
 			>
-				<div class="md:max-w-[270px]">
+				<div class="max-w-[270px] text-center md:text-left lg:text-center">
 					<h2 class="text-h2-desktop font-bold mb-4">Pro</h2>
 					<p class="text-body opacity-60 mb-10">
 						More advanced features available. Recommended for photography
@@ -74,11 +74,11 @@
 					</button>
 				</div>
 
-				<div class="mb-10">
+				<div class="mb-10 text-center">
 					<p class="text-h1-desktop font-bold">
 						{{ isYearly ? "$390.00" : "$39.00" }}
 					</p>
-					<p class="text-body opacity-60">
+					<p class="text-body opacity-60 md:text-right lg:text-center">
 						per {{ isYearly ? "year" : "month" }}
 					</p>
 				</div>
@@ -91,9 +91,9 @@
 
 			<!-- Business Plan -->
 			<div
-				class="text-center flex flex-col md:flex-row md:justify-between lg:flex-col w-full md:text-left py-14 px-8 bg-light-grey md:even:py-[88px] md:even:bg-black md:even:text-white"
+				class="text-center items-center flex flex-col md:flex-row md:justify-between lg:flex-col w-full md:text-left py-14 px-8 bg-light-grey md:even:py-[88px] md:even:bg-black md:even:text-white"
 			>
-				<div class="md:max-w-[270px]">
+				<div class="max-w-[270px] text-center md:text-left lg:text-center">
 					<h2 class="text-h2-desktop font-bold mb-4">Business</h2>
 					<p class="text-body opacity-60 mb-10">
 						Additional features available such as more detailed metrics.
@@ -107,11 +107,11 @@
 					</button>
 				</div>
 
-				<div class="mb-10">
+				<div class="mb-10 text-center">
 					<p class="text-h1-desktop font-bold">
 						{{ isYearly ? "$990.00" : "$90.00" }}
 					</p>
-					<p class="text-body opacity-60">
+					<p class="text-body opacity-60 md:text-right lg:text-center">
 						per {{ isYearly ? "year" : "month" }}
 					</p>
 				</div>
